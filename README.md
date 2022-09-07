@@ -1,28 +1,25 @@
 # SplashKit All-In-One (AIO) installer
 
-The shell script aio-install.sh contain commands that install SplashKit and all related tools on Windows, MacOS, and Ubuntu.  
-See the video demo of the installation process [here](https://video.deakin.edu.au/media/t/1_ybysuvjw).
+The shell script aio-install.sh contain commands that install SplashKit and all related tools on Windows, MacOS, and Ubuntu. See the installation demo [here](https://video.deakin.edu.au/media/t/1_ybysuvjw).
 
 ## Table of Contents
 
-1. [Start Installation](#start-installation)
-   - [Windows](#windows)
-   - [MacOS](#macos)
-   - [Ubuntu](#ubuntu)
-2. [Windows](#windows-1)
-   - [Installation Interface](#installation-interface)
-   - [Issues](#issues)
-3. [MacOS](#macos-1)
-   - [Xcode](#xcode)
-   - [SplashKit SDK](#splashkit-sdk)
-   - [Brew](#brew)
-   - [Installation Interface](#installation-interface-1)
-4. [Ubuntu](#ubuntu-1)
-   - [Installation Interface](#installation-interface-2)
-5. [Uninstall](#uninstall)
-   - [Windows](#windows-2)
-   - [MacOS](#macos-2)
-   - [Ubuntu](#ubuntu-2)
+- [SplashKit All-In-One (AIO) installer](#splashkit-all-in-one-aio-installer)
+  - [Table of Contents](#table-of-contents)
+  - [Start Installation](#start-installation)
+    - [Run the following in the terminal to start installing](#run-the-following-in-the-terminal-to-start-installing)
+  - [Windows](#windows)
+    - [Installation Interface](#installation-interface)
+    - [Issues](#issues)
+  - [MacOS](#macos)
+    - [Xcode](#xcode)
+    - [SplashKit SDK](#splashkit-sdk)
+    - [Brew](#brew)
+    - [Installation Interface](#installation-interface-1)
+  - [Ubuntu](#ubuntu)
+    - [Installation Interface](#installation-interface-2)
+  - [Uninstall](#uninstall)
+    - [Run the following in the terminal to uninstall.](#run-the-following-in-the-terminal-to-uninstall)
 
 ## Start Installation
 
@@ -52,11 +49,11 @@ The installer uses [Winget](https://github.com/microsoft/winget-cli) (Windows Pa
 
 ![app-installer](images/app-installer.png)
 
-After installing MSYS2, the script can now allow the PowerShell command line to execute bash scripts through MSYS2 by using the [bash invoke commands](https://www.gnu.org/software/bash/manual/html_node/Invoking-Bash.html) `-l` or `--login`, which allows execution to be run by the MYSY2 shell, and `-c`, which run the commands enclosed within the double quotation, e.g. `$ bash -l -c "<command_here>"`. The script can now install Git, SplashKit SDK, and GCC for C++ using MSYS2 through the PowerShell.
+After installing **MSYS2**, the script can now allow the PowerShell command line to execute bash scripts through MSYS2 by using the [bash invoke commands](https://www.gnu.org/software/bash/manual/html_node/Invoking-Bash.html) `-l` or `--login`, which allows execution to be run by the MYSY2 shell, and `-c`, which run the commands enclosed within the double quotation, e.g. `$ bash -l -c "<command_here>"`. The script can now install **Git**, **SplashKit SDK**, and **GCC for C++** using MSYS2 through the PowerShell.
 
 ### Installation Interface
 
-The script displays a Checkbox to allow a selection of tools to install. The script [creates .Net objects](https://docs.microsoft.com/en-us/powershell/scripting/samples/creating-.net-and-com-objects--new-object-?view=powershell-7) in Powershell and uses the namespace `System.Windows.Forms` to represent [CheckBox](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.checkbox?view=windowsdesktop-6.0) objects.
+The script displays a Checkbox to allow a selection of tools to install. The script creates [.Net objects](https://docs.microsoft.com/en-us/powershell/scripting/samples/creating-.net-and-com-objects--new-object-?view=powershell-7) in Powershell and uses the namespace `System.Windows.Forms` to represent [CheckBox objects](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.checkbox?view=windowsdesktop-6.0).
 
 ![windows-interface](images/windows-interface.png)
 
@@ -70,7 +67,7 @@ Some Windows computers may not recognise Winget when executed in the PowerShell 
 
 ### Xcode
 
-The script starts by executing the command `xcode-select –install` to install the [Xcode](https://mac.install.guide/commandlinetools/4.html) command line tool. If an existing Xcode directory exists, the script deletes it first, then creates a new one during installation.
+The script starts by executing the command `xcode-select --install` to install the [Xcode](https://mac.install.guide/commandlinetools/4.html) command line tool. If an existing Xcode directory exists, the script deletes it first, then creates a new one during installation.
 
 ### SplashKit SDK
 
@@ -88,7 +85,7 @@ The installation process for MacOS is entirely within the command-line.
 
 ## Ubuntu
 
-The script uses Ubuntu's default package manager [APT](https://wiki.debian.org/Apt) to install Git and Curl, which are needed to install the [SplashKit Manager](https://splashkit.io/articles/installation/ubuntu/step-1/). After installing the manager, the script installs all other SplashKit Linux dependencies. Afterward, the script uses the [SNAP](https://snapcraft.io/) package to install [VS Code](https://code.visualstudio.com/) and **APT** to install [.Net 6 LTS Core SDK](https://dotnet.microsoft.com/en-us/download).
+The script uses Ubuntu's default package manager [APT](https://wiki.debian.org/Apt) to install **Git** and **Curl**, which are needed to install [SplashKit Manager](https://splashkit.io/articles/installation/ubuntu/step-1/). After installing the manager, the script installs all other **SplashKit Linux dependencies**. Afterward, the script uses the [SNAP](https://snapcraft.io/) package to install [VS Code](https://code.visualstudio.com/) and **APT** to install [.Net 6 LTS Core SDK](https://dotnet.microsoft.com/en-us/download).
 
 ### Installation Interface
 
